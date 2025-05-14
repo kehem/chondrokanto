@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos - EduResHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1617791160588-241658c0f566?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-blue-600">EduResHub</a>
+                </div>
+                <div class="hidden sm:flex sm:items-center sm:space-x-8">
+                    <a href="/ai-education.html" class="text-gray-600 hover:text-blue-600 transition">AI for Education</a>
+                    <a href="/statistics.html" class="text-gray-600 hover:text-blue-600 transition">Statistics</a>
+                    <a href="/publications.html" class="text-gray-600 hover:text-blue-600 transition">Publications</a>
+                    <a href="/msoffice.html" class="text-gray-600 hover:text-blue-600 transition">MS Office</a>
+                    <a href="/methodology.html" class="text-gray-600 hover:text-blue-600 transition">Methodology</a>
+                </div>
+                <div class="flex items-center sm:hidden">
+                    <button id="menu-toggle" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div idarranty="mobile-menu" class="hidden sm:hidden bg-white shadow-md">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+                <a href="/ai-education.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">AI for Education</a>
+                <a href="/statistics.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Statistics</a>
+                <a href="/publications.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Publications</a>
+                <a href="/msoffice.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">MS Office</a>
+                <a href="/methodology.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Methodology</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 hero-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- <img src="https://via.placeholder.com/64?text=📽️" alt="Videos Icon" class="mx-auto mb-4 w-16 h-16"> -->
+            <h1 class="text-4xl sm:text-5xl font-bold mb-4">
+                Video 
+            </h1>
+            <p class="text-lg sm:text-xl mb-8 max-w-3xl mx-auto">
+                Watch our collection of tutorials and guides on AI, statistics, academic writing, Microsoft Office, and research methodologies.
+            </p>
+            <a href="#videos" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
+                Explore Videos
+            </a>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Featured Videos</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video 1 -->
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="relative aspect-w-16 aspect-h-9">
+                        <img src="https://images.unsplash.com/photo-1617791160588-241658c0f566?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="AI in Education Video Thumbnail" class="w-full h-full object-cover rounded-t-lg">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-12 h-12 text-white opacity-80" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">AI-Powered Learning Tools</h3>
+                        <p class="text-gray-600 mb-4">Explore how AI enhances personalized education in this 10-minute tutorial.</p>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Watch Now</a>
+                    </div>
+                </div>
+                <!-- Video 2 -->
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="relative aspect-w-16 aspect-h-9">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Statistics Tutorial Video Thumbnail" class="w-full h-full object-cover rounded-t-lg">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-12 h-12 text-white opacity-80" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Statistics for Beginners</h3>
+                        <p class="text-gray-600 mb-4">Learn key statistical concepts with this beginner-friendly video guide.</p>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Watch Now</a>
+                    </div>
+                </div>
+                <!-- Video 3 -->
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="relative aspect-w-16 aspect-h-9">
+                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Publication Writing Video Thumbnail" class="w-full h-full object-cover rounded-t-lg">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-12 h-12 text-white opacity-80" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Crafting Academic Papers</h3>
+                        <p class="text-gray-600 mb-4">A step-by-step guide to writing impactful research publications.</p>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Watch Now</a>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="text-center mt-8">
+                <a href="#" class="inline-block text-blue-600 hover:underline">View More Videos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                         <!-- <img src="https://via.placeholder.com/32?text=📚" alt="EduResHub Logo" class="w-8 h-8 mr-2">  -->
+                        <h3 class="text-lg font-semibold">EduResHub</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Education and Research Hub is dedicated to empowering academics and researchers worldwide.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/ai-education.html" class="text-gray-400 hover:text-white transition">AI for Education</a></li>
+                        <li><a href="/statistics.html" class="text-gray-400 hover:text-white transition">Statistics</a></li>
+                        <li><a href="/publications.html" class="text-gray-400 hover:text-white transition">Publications</a></li>
+                        <li><a href="/msoffice.html" class="text-gray-400 hover:text-white transition">MS Office</a></li>
+                        <li><a href="/methodology.html" class="text-gray-400 hover:text-white transition">Methodology</a></li>
+                        <li><a href="/videos.html" class="text-gray-400 hover:text-white transition">Videos</a></li>
+                        <li><a href="/blogs.html" class="text-gray-400 hover:text-white transition">Blogs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <p class="text-gray-400">Email: contact@edureshub.com</p>
+                    <p class="text-gray-400">Phone: +1 (123) 456-7890</p>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-400">
+                © 2025 EduResHub. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

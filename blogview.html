@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI for Education and Research - EduResHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-blue-600">EduResHub</a>
+                </div>
+                <div class="hidden sm:flex sm:items-center sm:space-x-8">
+                    <a href="/ai-education.html" class="text-blue-600 font-semibold">AI for Education</a>
+                    <a href="/statistics.html" class="text-gray-600 hover:text-blue-600 transition">Statistics</a>
+                    <a href="/publications.html" class="text-gray-600 hover:text-blue-600 transition">Publications</a>
+                    <a href="/msoffice.html" class="text-gray-600 hover:text-blue-600 transition">MS Office</a>
+                    <a href="/methodology.html" class="text-gray-600 hover:text-blue-600 transition">Methodology</a>
+                </div>
+                <div class="flex items-center sm:hidden">
+                    <button id="menu-toggle" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-white shadow-md">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+                <a href="/ai-education.html" class="block text-blue-600 font-semibold px-3 py-2 rounded-md">AI for Education</a>
+                <a href="/statistics.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Statistics</a>
+                <a href="/publications.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Publications</a>
+                <a href="/msoffice.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">MS Office</a>
+                <a href="/methodology.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Methodology</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 hero-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- <img src="https://via.placeholder.com/64?text=🤖" alt="AI for Education Icon" class="mx-auto mb-4 w-16 h-16"> -->
+            <h1 class="text-4xl sm:text-5xl font-bold mb-4">
+                AI for Education and Research
+            </h1>
+            <p class="text-lg sm:text-xl mb-8 max-w-3xl mx-auto">
+                Explore how artificial intelligence is revolutionizing academic learning, research methodologies, and educational tools.
+            </p>
+            <a href="#content" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
+                Learn More
+            </a>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section id="content" class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white p-8 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-6">Introduction to AI in Academia</h2>
+                <p class="text-gray-600 mb-6">
+                    Artificial Intelligence (AI) is transforming education and research by enabling personalized learning, automating repetitive tasks, and enhancing data analysis. From intelligent tutoring systems to advanced research tools, AI is reshaping how academics approach teaching and discovery.
+                </p>
+                <img src="https://images.unsplash.com/photo-1516321310764-3a4f0b71d297?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AI in Education Illustration" class="w-full rounded-md mb-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Key Applications of AI</h3>
+                <ul class="list-disc list-inside text-gray-600 mb-6 space-y-2">
+                    <li>Personalized Learning: AI-driven platforms adapt to individual student needs, improving engagement and outcomes.</li>
+                    <li>Research Automation: Tools like natural language processing (NLP) assist in literature reviews and data extraction.</li>
+                    <li>Predictive Analytics: AI models forecast trends and outcomes, aiding academic planning and research.</li>
+                    <li>Virtual Assistants: Chatbots and AI assistants streamline administrative tasks for educators and researchers.</li>
+                </ul>
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Getting Started with AI Tools</h3>
+                <p class="text-gray-600 mb-6">
+                    Begin with accessible AI platforms like Google Colab for machine learning, Grammarly for AI-enhanced writing, or Zotero with AI plugins for research management. These tools are user-friendly and tailored for academic use.
+                </p>
+                <div class="flex justify-center">
+                    <a href="#" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
+                        Explore AI Resources
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <!-- <img src="https://via.placeholder.com/32?text=📚" alt="EduResHub Logo" class="w-8 h-8 mr-2"> -->
+                        <h3 class="text-lg font-semibold">EduResHub</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Education and Research Hub is dedicated to empowering academics and researchers worldwide.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/ai-education.html" class="text-gray-400 hover:text-white transition">AI for Education</a></li>
+                        <li><a href="/statistics.html" class="text-gray-400 hover:text-white transition">Statistics</a></li>
+                        <li><a href="/publications.html" class="text-gray-400 hover:text-white transition">Publications</a></li>
+                        <li><a href="/msoffice.html" class="text-gray-400 hover:text-white transition">MS Office</a></li>
+                        <li><a href="/methodology.html" class="text-gray-400 hover:text-white transition">Methodology</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <p class="text-gray-400">Email: contact@edureshub.com</p>
+                    <p class="text-gray-400">Phone: +1 (123) 456-7890</p>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-400">
+                © 2025 EduResHub. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

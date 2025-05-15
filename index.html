@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education and Research Hub - EduResHub</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+             font-family: 'Roboto', sans-serif;
         }
         .hero-bg {
             background-image: url('https://static.vecteezy.com/system/resources/previews/011/020/080/non_2x/education-in-colorful-letters-photo.jpg');
@@ -22,7 +22,7 @@
 <body class="bg-gray-50 text-gray-800">
     <!-- Navigation -->
     <nav class="bg-white shadow-sm fixed w-full z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <a href="/" class="text-2xl font-bold text-blue-600">EduResHub</a>
@@ -33,6 +33,7 @@
                     <a href="#publications" class="text-gray-600 hover:text-blue-600 transition">Publications</a>
                     <a href="#msoffice" class="text-gray-600 hover:text-blue-600 transition">MS Office</a>
                     <a href="#methodology" class="text-gray-600 hover:text-blue-600 transition">Methodology</a>
+                    <a href="blog.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Blog</a>
                     <a href="aboutme.html" class="text-gray-600 hover:text-blue-600 transition">About Me</a>
                 </div>
                 <div class="flex items-center sm:hidden">
@@ -52,6 +53,7 @@
                 <a href="#publications" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Publications</a>
                 <a href="#msoffice" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">MS Office</a>
                 <a href="#methodology" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Methodology</a>
+                <a href="blog.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Blog</a>
                 <a href="aboutme.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">About Me</a>
             </div>
         </div>
@@ -59,7 +61,7 @@
 
     <!-- Hero Section -->
     <section class="pt-24 pb-12 hero-bg text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
              <!-- <img src="https://via.placeholder.com/64?text=📚" alt="EduResHub Icon" class="mx-auto mb-4 w-16 h-16"> -->
             <h1 class="text-4xl sm:text-5xl font-bold mb-4">
                 Welcome to Education and Research Hub
@@ -73,63 +75,73 @@
         </div>
     </section>
 
-    <!-- Topics Section -->
-    <section id="topics" class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Our Focus Areas</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- AI for Education and Research -->
-                <div id="ai" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
-                    <img src="https://img.freepik.com/premium-vector/ai-technology-icon-artificial-intelligence-machine-learning-concepts-futuristic-ai-symbol_689336-880.jpg?w=2000" alt="AI Icon" class="w-12 h-12 mb-3">
+<!-- Topics Section -->
+<section id="topics" class="py-16">
+    <div class="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Our Focus Areas</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- AI for Education and Research -->
+            <div id="ai" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition flex items-center">
+                <img src="https://img.freepik.com/premium-vector/ai-technology-icon-artificial-intelligence-machine-learning-concepts-futuristic-ai-symbol_689336-880.jpg?w=2000" alt="AI Icon" class="w-12 h-12 mr-4 flex-shrink-0">
+                <div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-3">AI for Education & Research</h3>
-                    <p class="text-gray-600 mb-4">
+                    <p class="text-gray-600 mb-4 line-clamp-3">
                         Discover how artificial intelligence is transforming education and research with innovative tools and methodologies.
                     </p>
                     <a href="ai.html" class="text-blue-600 hover:underline">Learn More</a>
                 </div>
-                <!-- Statistics Analytics -->
-                <div id="statistics" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
-                    <img src="https://static.vecteezy.com/system/resources/previews/000/349/407/original/vector-statistics-icon.jpg" alt="Statistics Icon" class="w-12 h-12 mb-3">
+            </div>
+            <!-- Statistics Analytics -->
+            <div id="statistics" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition flex items-center">
+                <img src="https://static.vecteezy.com/system/resources/previews/000/349/407/original/vector-statistics-icon.jpg" alt="Statistics Icon" class="w-12 h-12 mr-4 flex-shrink-0">
+                <div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-3">Statistics Analytics</h3>
-                    <p class="text-gray-600 mb-4">
+                    <p class="text-gray-600 mb-4 line-clamp-3">
                         Master statistical tools and techniques to analyze data effectively for academic and research purposes.
                     </p>
                     <a href="ai.html" class="text-blue-600 hover:underline">Learn More</a>
                 </div>
-                <!-- How to Write Publications -->
-                <div id="publications" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
-                    <img src="https://tse1.mm.bing.net/th/id/OIP.5N7gcjApBQ4dB-I707xbOQHaIx?rs=1&pid=ImgDetMain" alt="Publications Icon" class="w-12 h-12 mb-3">
+            </div>
+            <!-- How to Write Publications -->
+            <div id="publications" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition flex items-center">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.5N7gcjApBQ4dB-I707xbOQHaIx?rs=1&pid=ImgDetMain" alt="Publications Icon" class="w-12 h-12 mr-4 flex-shrink-0">
+                <div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-3">How to Write Publications</h3>
-                    <p class="text-gray-600 mb-4">
+                    <p class="text-gray-600 mb-4 line-clamp-3">
                         Learn the art of crafting impactful academic publications, from structure to submission.
                     </p>
                     <a href="ai.html" class="text-blue-600 hover:underline">Learn More</a>
                 </div>
-                <!-- Microsoft Office for Academic -->
-                <div id="msoffice" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
-                    <img src="https://tse3.mm.bing.net/th/id/OIP.U7cSw5u_KLKcz9b3gYeUJwHaHk?rs=1&pid=ImgDetMain" alt="MS Office Icon" class="w-12 h-12 mb-3">
+            </div>
+            <!-- Microsoft Office for Academic -->
+            <div id="msoffice" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition flex items-center">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.U7cSw5u_KLKcz9b3gYeUJwHaHk?rs=1&pid=ImgDetMain" alt="MS Office Icon" class="w-12 h-12 mr-4 flex-shrink-0">
+                <div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-3">Microsoft Office for Academics</h3>
-                    <p class="text-gray-600 mb-4">
+                    <p class="text-gray-600 mb-4 line-clamp-3">
                         Leverage Microsoft Office tools to streamline academic tasks, from writing papers to creating presentations.
                     </p>
                     <a href="ai.html" class="text-blue-600 hover:underline">Learn More</a>
                 </div>
-                <!-- Research Methodology -->
-                <div id="methodology" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
-                    <img src="https://cdn3.vectorstock.com/i/1000x1000/71/22/black-microscope-icon-vector-9417122.jpg" alt="Methodology Icon" class="w-12 h-12 mb-3">
+            </div>
+            <!-- Research Methodology -->
+            <div id="methodology" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition flex items-center">
+                <img src="https://cdn3.vectorstock.com/i/1000x1000/71/22/black-microscope-icon-vector-9417122.jpg" alt="Methodology Icon" class="w-12 h-12 mr-4 flex-shrink-0">
+                <div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-3">Research Methodology</h3>
-                    <p class="text-gray-600 mb-4">
+                    <p class="text-gray-600 mb-4 line-clamp-3">
                         Explore robust research methodologies to design and conduct high-quality academic studies.
                     </p>
                     <a href="ai.html" class="text-blue-600 hover:underline">Learn More</a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
                 <div>
                     <div class="flex items-center mb-4">

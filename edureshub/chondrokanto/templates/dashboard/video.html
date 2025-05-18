@@ -1,0 +1,45 @@
+{% extends "dashboard/base.html" %} 
+{% load crispy_forms_tags %} 
+{% block content %}
+
+<div class="content">
+  <h1>Welcome to Your Project({{p}})</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form method="POST" enctype="multipart/form-data" >
+                    {% csrf_token %}
+                    {{form | crispy}}
+                    <input type="submit" class="btn btn-primary" value="Save">
+                </form> 
+            </div>
+            <div class="col">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for s in data %}
+                            <tr>
+                                <th scope="row">{{forloop.counter}}</th>
+                                <td>{{s.title}}</td>
+                                <td>
+                                    <a href="{% url "video_dashboard_edit" s.id %}" class="btn btn-secondary">EDIT</a>
+                                    {% comment %} <a href="{% url "openhouse_image" s.id %}" class="btn btn-primary">Add Image</a> {% endcomment %}
+                                
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        
+                    </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

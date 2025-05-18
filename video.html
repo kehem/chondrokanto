@@ -1,182 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Videos - EduResHub</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .hero-bg {
-            background-image: url('https://images.unsplash.com/photo-1617791160588-241658c0f566?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            background-blend-mode: overlay;
-            background-color: rgba(0, 0, 0, 0.4);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduResHub - Video Resources</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .smooth-scroll {
+      scroll-behavior: smooth;
+    }
+    .gradient-overlay {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+    }
+    .bg-charcoal {
+      background-color: #2D3748;
+    }
+    .aspect-video {
+      aspect-ratio: 16 / 9;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm fixed w-full z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-blue-600">EduResHub</a>
-                </div>
-                <div class="hidden sm:flex sm:items-center sm:space-x-8">
-                    <a href="/ai-education.html" class="text-gray-600 hover:text-blue-600 transition">AI for Education</a>
-                    <a href="/statistics.html" class="text-gray-600 hover:text-blue-600 transition">Statistics</a>
-                    <a href="/publications.html" class="text-gray-600 hover:text-blue-600 transition">Publications</a>
-                    <a href="/msoffice.html" class="text-gray-600 hover:text-blue-600 transition">MS Office</a>
-                    <a href="/methodology.html" class="text-gray-600 hover:text-blue-600 transition">Methodology</a>
-                </div>
-                <div class="flex items-center sm:hidden">
-                    <button id="menu-toggle" class="text-gray-600 hover:text-blue-600 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div idarranty="mobile-menu" class="hidden sm:hidden bg-white shadow-md">
-            <div class="px-4 pt-2 pb-3 space-y-1">
-                <a href="/ai-education.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">AI for Education</a>
-                <a href="/statistics.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Statistics</a>
-                <a href="/publications.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Publications</a>
-                <a href="/msoffice.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">MS Office</a>
-                <a href="/methodology.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Methodology</a>
-            </div>
-        </div>
-    </nav>
+<body class="bg-gray-100 smooth-scroll">
+  <!-- Navigation -->
+  <nav class="bg-charcoal text-white sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-3xl font-bold">EduResHub</a>
+      <div class="hidden md:flex space-x-8">
+        <a href="index.html#home" class="hover:text-yellow-400 transition">Home</a>
+        <a href="index.html#courses" class="hover:text-yellow-400 transition">Courses</a>
+        <a href="index.html#research" class="hover:text-yellow-400 transition">Research</a>
+        <a href="videos.html" class="hover:text-yellow-400 transition">Videos</a>
+        <a href="index.html#contact" class="hover:text-yellow-400 transition">Contact</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-charcoal text-white">
+      <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <a href="index.html#home" class="hover:text-yellow-400 transition">Home</a>
+        <a href="index.html#courses" class="hover:text-yellow-400 transition">Courses</a>
+        <a href="index.html#research" class="hover:text-yellow-400 transition">Research</a>
+        <a href="videos.html" class="hover:text-yellow-400 transition">Videos</a>
+        <a href="index.html#contact" class="hover:text-yellow-400 transition">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-24 pb-12 hero-bg text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <!-- <img src="https://via.placeholder.com/64?text=📽️" alt="Videos Icon" class="mx-auto mb-4 w-16 h-16"> -->
-            <h1 class="text-4xl sm:text-5xl font-bold mb-4">
-                Video 
-            </h1>
-            <p class="text-lg sm:text-xl mb-8 max-w-3xl mx-auto">
-                Watch our collection of tutorials and guides on AI, statistics, academic writing, Microsoft Office, and research methodologies.
-            </p>
-            <a href="#videos" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
-                Explore Videos
+  <!-- Banner Section -->
+  <section id="video-banner" class="relative h-96 flex items-center justify-center text-white">
+    <img src="https://images.unsplash.com/photo-1618401471353-7f7e73c335e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Modern video learning environment" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 gradient-overlay"></div>
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Learn with Engaging Videos</h1>
+      <p class="text-lg md:text-xl text-cream mb-6 max-w-2xl mx-auto">Unlock knowledge with our curated video resources designed for students and researchers.</p>
+      <a href="#videos" class="inline-block  text-charcoal py-3 px-6 rounded-full text-base font-semibold hover:bg-yellow-600 transition transform hover:scale-105">Browse Videos</a>
+    </div>
+  </section>
+
+  <!-- Video List Section -->
+  <section id="videos" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-charcoal mb-12 text-center md:text-left">Video Resources</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Video Card 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <div class="relative aspect-video">
+            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Data Science Intro" class="w-full h-full object-cover">
+            <button class="play-button absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-70 transition" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+              <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-charcoal mb-3">Introduction to Data Science</h3>
+            <p class="text-gray-600 mb-4">Learn the basics of data science and its applications.</p>
+          </div>
+        </div>
+        <!-- Video Card 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <div class="relative aspect-video">
+            <img src="https://images.unsplash.com/photo-1516321310766-66f1cc6c7d16?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Research Methods" class="w-full h-full object-cover">
+            <button class="play-button absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-70 transition" data-video="https://www.youtube.com/embed/1T4XMjdLyi4">
+              <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-charcoal mb-3">Research Methods Overview</h3>
+            <p class="text-gray-600 mb-4">Understand key research methodologies for academic success.</p>
+          </div>
+        </div>
+        <!-- Video Card 3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <div class="relative aspect-video">
+            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Web Development" class="w-full h-full object-cover">
+            <button class="play-button absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-70 transition" data-video="https://www.youtube.com/embed/Q33KBiDriJY">
+              <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-charcoal mb-3">Web Development Basics</h3>
+            <p class="text-gray-600 mb-4">Get started with HTML, CSS, and JavaScript for web development.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Modal -->
+  <div id="video-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+    <div class="relative bg-white rounded-xl w-[70vw] aspect-video max-w-7xl">
+      <button id="close-modal" class="absolute top-4 right-4 text-charcoal hover:text-yellow-400 focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <iframe id="video-frame" class="w-full h-full rounded-xl" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-charcoal text-cream py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">EduResHub</h3>
+          <p class="text-gray-300">Your gateway to world-class education and groundbreaking research.</p>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Explore</h3>
+          <ul class="space-y-3">
+            <li><a href="index.html#home" class="hover:text-yellow-400 transition">Home</a></li>
+            <li><a href="index.html#courses" class="hover:text-yellow-400 transition">Courses</a></li>
+            <li><a href="index.html#research" class="hover:text-yellow-400 transition">Research</a></li>
+            <li><a href="videos.html" class="hover:text-yellow-400 transition">Videos</a></li>
+            <li><a href="index.html#contact" class="hover:text-yellow-400 transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Get in Touch</h3>
+          <p class="text-gray-300">Email: info@edureshub.com</p>
+          <p class="text-gray-300">Phone: +123-456-7890</p>
+          <div class="mt-4 flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-yellow-400 transition">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.56v14.88A4.56 4.56 0 0 1 19.44 24H4.56A4.56 4.56 0 0 1 0 19.44V4.56A4.56 4.56 0 0 1 4.56 0h14.88A4.56 4.56 0 0 1 24 4.56zM8.46 18.75h7.08v-7.08l-3.54-3.54-3.54 3.54v7.08zm10.62-10.62h-3.54V4.56h3.54v3.57z"></path></svg>
             </a>
+            <a href="#" class="text-gray-300 hover:text-yellow-400 transition">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.04c-5.52 0-10 4.48-10 10 0 4.42 3.58 8.06 8.12 8.92v-6.3H7.56v-2.62h2.56V9.92c0-2.54 1.5-3.94 3.82-3.94 1.1 0 2.26.18 2.26.18v2.48h-1.28c-1.26 0-1.66.78-1.66 1.58v1.94h2.82l-.46 2.62h-2.36v6.3c4.54-.86 8.12-4.5 8.12-8.92 0-5.52-4.48-10-10-10z"></path></svg>
+            </a>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="mt-12 are a type of candy that is popular among children. text-center text-gray-300">
+        <p>© 2025 EduResHub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Videos Section -->
-    <section id="videos" class="py-16 bg-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Featured Videos</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Video 1 -->
-                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition">
-                    <div class="relative aspect-w-16 aspect-h-9">
-                        <img src="https://images.unsplash.com/photo-1617791160588-241658c0f566?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="AI in Education Video Thumbnail" class="w-full h-full object-cover rounded-t-lg">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <svg class="w-12 h-12 text-white opacity-80" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">AI-Powered Learning Tools</h3>
-                        <p class="text-gray-600 mb-4">Explore how AI enhances personalized education in this 10-minute tutorial.</p>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Watch Now</a>
-                    </div>
-                </div>
-                <!-- Video 2 -->
-                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition">
-                    <div class="relative aspect-w-16 aspect-h-9">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Statistics Tutorial Video Thumbnail" class="w-full h-full object-cover rounded-t-lg">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <svg class="w-12 h-12 text-white opacity-80" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Statistics for Beginners</h3>
-                        <p class="text-gray-600 mb-4">Learn key statistical concepts with this beginner-friendly video guide.</p>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Watch Now</a>
-                    </div>
-                </div>
-                <!-- Video 3 -->
-                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition">
-                    <div class="relative aspect-w-16 aspect-h-9">
-                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Publication Writing Video Thumbnail" class="w-full h-full object-cover rounded-t-lg">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <svg class="w-12 h-12 text-white opacity-80" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Crafting Academic Papers</h3>
-                        <p class="text-gray-600 mb-4">A step-by-step guide to writing impactful research publications.</p>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Watch Now</a>
-                    </div>
-                </div>
-               
-            </div>
-            <div class="text-center mt-8">
-                <a href="#" class="inline-block text-blue-600 hover:underline">View More Videos</a>
-            </div>
-        </div>
-    </section>
+  <!-- JavaScript for Mobile Menu, Smooth Scroll, and Video Modal -->
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
-                <div>
-                    <div class="flex items-center mb-4">
-                         <!-- <img src="https://via.placeholder.com/32?text=📚" alt="EduResHub Logo" class="w-8 h-8 mr-2">  -->
-                        <h3 class="text-lg font-semibold">EduResHub</h3>
-                    </div>
-                    <p class="text-gray-400">
-                        Education and Research Hub is dedicated to empowering academics and researchers worldwide.
-                    </p>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="/ai-education.html" class="text-gray-400 hover:text-white transition">AI for Education</a></li>
-                        <li><a href="/statistics.html" class="text-gray-400 hover:text-white transition">Statistics</a></li>
-                        <li><a href="/publications.html" class="text-gray-400 hover:text-white transition">Publications</a></li>
-                        <li><a href="/msoffice.html" class="text-gray-400 hover:text-white transition">MS Office</a></li>
-                        <li><a href="/methodology.html" class="text-gray-400 hover:text-white transition">Methodology</a></li>
-                        <li><a href="/videos.html" class="text-gray-400 hover:text-white transition">Videos</a></li>
-                        <li><a href="/blogs.html" class="text-gray-400 hover:text-white transition">Blogs</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-                    <p class="text-gray-400">Email: contact@edureshub.com</p>
-                    <p class="text-gray-400">Phone: +1 (123) 456-7890</p>
-                </div>
-            </div>
-            <div class="mt-8 text-center text-gray-400">
-                © 2025 EduResHub. All rights reserved.
-            </div>
-        </div>
-    </footer>
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
 
-    <!-- JavaScript for Mobile Menu Toggle -->
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+    // Smooth Scroll for Nav Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
         });
-    </script>
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Video Modal Functionality
+    const videoModal = document.getElementById('video-modal');
+    const videoFrame = document.getElementById('video-frame');
+    const closeModal = document.getElementById('close-modal');
+    const playButtons = document.querySelectorAll('.play-button');
+
+    playButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const videoUrl = button.getAttribute('data-video');
+        videoFrame.src = videoUrl;
+        videoModal.classList.remove('hidden');
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      videoModal.classList.add('hidden');
+      videoFrame.src = ''; // Stop video by clearing source
+    });
+
+    // Close modal when clicking outside
+    videoModal.addEventListener('click', (e) => {
+      if (e.target === videoModal) {
+        videoModal.classList.add('hidden');
+        videoFrame.src = '';
+      }
+    });
+  </script>
 </body>
 </html>

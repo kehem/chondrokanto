@@ -1,0 +1,35 @@
+{% extends "chondro/base.html" %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="pt-20 pb-10 hero-bg text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-3xl sm:text-4xl font-semibold mb-3">
+                EduResHub Blog
+            </h1>
+            <p class="text-base sm:text-lg mb-6 max-w-2xl mx-auto opacity-90">
+                Explore our latest insights, tips, and updates on AI, statistics, publications, Microsoft Office, and research methodologies.
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog Posts Section -->
+    <section id="blog-posts" class="py-12 bg-[#F7FAF8]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-semibold text-[#2F855A] text-center mb-10">All Blog Posts</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {% for b in blog %}
+                    <!-- Blog Post -->
+                    <div class="bg-white p-5 rounded-md shadow-sm hover:shadow-md transition flex flex-col">
+                        <img src="{{b.image.url}}" alt="{{b.title}}" class="w-full h-36 object-cover rounded-md mb-3">
+                        <h3 class="text-lg font-medium text-[#2F855A] mb-2">{{b.title}}</h3>
+                        <p class="text-[#4A5568] text-sm mb-3 line-clamp-3 flex-grow">
+                            {{b.sub_title}}
+                        </p>
+                        <a href="{% url 'blogview' b.id %}" class="text-[#68D391] hover:underline text-sm mt-auto">Read More</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock content %}

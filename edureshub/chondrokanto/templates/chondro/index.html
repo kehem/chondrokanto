@@ -1,0 +1,39 @@
+{% extends "chondro/base.html" %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="pt-20 pb-10 hero-bg text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-3xl sm:text-4xl font-semibold mb-3">
+                {{info.banner_title}}
+            </h1>
+            <p class="text-base sm:text-lg mb-6 max-w-2xl mx-auto opacity-90">
+                {{info.banner_sub_title}}
+            </p>
+            <a href="#topics" class="inline-block bg-dark text-white px-5 py-2 rounded-md hover:bg-[#4ADE80] transition text-sm font-medium">
+                Explore Topics
+            </a>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section id="topics" class="py-12 bg-[#F7FAF8]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-semibold text-dark text-center mb-10">Our Focus Areas</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {% for c in category %}
+                    <div class="bg-white p-5 rounded-md shadow-sm hover:shadow-md transition flex items-center">
+                        <img src="{{c.icon.url}}" alt="{{c.sub_title}}" class="w-10 h-10 mr-3 flex-shrink-0">
+                        <div>
+                            <h3 class="text-lg font-medium text-[#2F855A] mb-2">{{c.title}}</h3>
+                            <p class="text-[#4A5568] text-sm mb-3 line-clamp-3">
+                                {{c.description}}
+                            </p>
+                            <a href="{% url 'category' c.id %}" class="text-[#68D391] hover:underline text-sm">Learn More</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock content %}

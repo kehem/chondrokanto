@@ -1,0 +1,48 @@
+{% extends "ohdashboard/base.html" %} 
+{% load crispy_forms_tags %} 
+{% block content %}
+
+<div class="content">
+  <h1>Welcome to Your Project</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form method="POST" enctype="multipart/form-data" >
+                    {% csrf_token %}
+                    {{form | crispy}}
+                    <input type="submit" class="btn btn-primary" value="Save">
+                </form> 
+            </div>
+            <div class="col">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Project Title</th>
+                        <th scope="col">Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for s in project %}
+                            <tr>
+                                <th scope="row">{{forloop.counter}}</th>
+                                <td>{{s.title}}</td>
+                                <td><img src="{{s.image.url}}" width="20px"></td>
+                                <td>
+                                    <a href="{% url "openhouse_project_edit" s.id %}" class="btn btn-secondary">EDIT</a>
+                                    <a href="{% url "openhouse_image" s.id %}" class="btn btn-primary">Add Image</a>
+                                    <a href="{% url "openhouse_project_data" s.id %}" class="btn btn-primary">Add Project Data</a>
+                                    
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        
+                    </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

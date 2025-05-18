@@ -1,187 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education and Research Hub - EduResHub</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-             font-family: 'Roboto', sans-serif;
-        }
-        .hero-bg {
-            background-image: url('https://static.vecteezy.com/system/resources/previews/011/020/080/non_2x/education-in-colorful-letters-photo.jpg');
-            background-size: cover;
-            background-position: center;
-            background-blend-mode: overlay;
-            background-color: rgba(0, 0, 0, 0.3);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduResHub - Education & Research Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .smooth-scroll {
+      scroll-behavior: smooth;
+    }
+    .gradient-overlay {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+    }
+    .bg-charcoal {
+      background-color: #2D3748;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm fixed w-full z-10">
-        <div class="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-blue-600">EduResHub</a>
-                </div>
-                <div class="hidden sm:flex sm:items-center sm:space-x-8">
-                    <a href="#ai" class="text-gray-600 hover:text-blue-600 transition">AI for Education</a>
-                    <a href="#statistics" class="text-gray-600 hover:text-blue-600 transition">Statistics</a>
-                    <a href="#publications" class="text-gray-600 hover:text-blue-600 transition">Publications</a>
-                    <a href="#msoffice" class="text-gray-600 hover:text-blue-600 transition">MS Office</a>
-                    <a href="#methodology" class="text-gray-600 hover:text-blue-600 transition">Methodology</a>
-                    <a href="blog.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Blog</a>
-                    <a href="aboutme.html" class="text-gray-600 hover:text-blue-600 transition">About Me</a>
-                </div>
-                <div class="flex items-center sm:hidden">
-                    <button id="menu-toggle" class="text-gray-600 hover:text-blue-600 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden sm:hidden bg-white shadow-md">
-            <div class="px-4 pt-2 pb-3 space-y-1">
-                <a href="#ai" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">AI for Education</a>
-                <a href="#statistics" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Statistics</a>
-                <a href="#publications" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Publications</a>
-                <a href="#msoffice" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">MS Office</a>
-                <a href="#methodology" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Methodology</a>
-                <a href="blog.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Blog</a>
-                <a href="aboutme.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">About Me</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="pt-24 pb-12 hero-bg text-white">
-        <div class="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-             <!-- <img src="https://via.placeholder.com/64?text=📚" alt="EduResHub Icon" class="mx-auto mb-4 w-16 h-16"> -->
-            <h1 class="text-4xl sm:text-5xl font-bold mb-4">
-                Welcome to Education and Research Hub
-            </h1>
-            <p class="text-lg sm:text-xl mb-8 max-w-3xl mx-auto">
-                Empowering academics and researchers with tools, knowledge, and resources for AI, statistics, publications, Microsoft Office, and research methodologies.
-            </p>
-            <a href="#topics" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
-                Explore Topics
-            </a>
-        </div>
-    </section>
-
-<!-- Topics Section -->
-<section id="topics" class="py-16">
-    <div class="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Our Focus Areas</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- AI for Education and Research -->
-            <div id="ai" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition flex items-center">
-                <img src="https://img.freepik.com/premium-vector/ai-technology-icon-artificial-intelligence-machine-learning-concepts-futuristic-ai-symbol_689336-880.jpg?w=2000" alt="AI Icon" class="w-12 h-12 mr-4 flex-shrink-0">
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">AI for Education & Research</h3>
-                    <p class="text-gray-600 mb-4 line-clamp-3">
-                        Discover how artificial intelligence is transforming education and research with innovative tools and methodologies.
-                    </p>
-                    <a href="ai.html" class="text-blue-600 hover:underline">Learn More</a>
-                </div>
-            </div>
-            <!-- Statistics Analytics -->
-            <div id="statistics" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition flex items-center">
-                <img src="https://static.vecteezy.com/system/resources/previews/000/349/407/original/vector-statistics-icon.jpg" alt="Statistics Icon" class="w-12 h-12 mr-4 flex-shrink-0">
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Statistics Analytics</h3>
-                    <p class="text-gray-600 mb-4 line-clamp-3">
-                        Master statistical tools and techniques to analyze data effectively for academic and research purposes.
-                    </p>
-                    <a href="ai.html" class="text-blue-600 hover:underline">Learn More</a>
-                </div>
-            </div>
-            <!-- How to Write Publications -->
-            <div id="publications" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition flex items-center">
-                <img src="https://tse1.mm.bing.net/th/id/OIP.5N7gcjApBQ4dB-I707xbOQHaIx?rs=1&pid=ImgDetMain" alt="Publications Icon" class="w-12 h-12 mr-4 flex-shrink-0">
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">How to Write Publications</h3>
-                    <p class="text-gray-600 mb-4 line-clamp-3">
-                        Learn the art of crafting impactful academic publications, from structure to submission.
-                    </p>
-                    <a href="ai.html" class="text-blue-600 hover:underline">Learn More</a>
-                </div>
-            </div>
-            <!-- Microsoft Office for Academic -->
-            <div id="msoffice" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition flex items-center">
-                <img src="https://tse3.mm.bing.net/th/id/OIP.U7cSw5u_KLKcz9b3gYeUJwHaHk?rs=1&pid=ImgDetMain" alt="MS Office Icon" class="w-12 h-12 mr-4 flex-shrink-0">
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Microsoft Office for Academics</h3>
-                    <p class="text-gray-600 mb-4 line-clamp-3">
-                        Leverage Microsoft Office tools to streamline academic tasks, from writing papers to creating presentations.
-                    </p>
-                    <a href="ai.html" class="text-blue-600 hover:underline">Learn More</a>
-                </div>
-            </div>
-            <!-- Research Methodology -->
-            <div id="methodology" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition flex items-center">
-                <img src="https://cdn3.vectorstock.com/i/1000x1000/71/22/black-microscope-icon-vector-9417122.jpg" alt="Methodology Icon" class="w-12 h-12 mr-4 flex-shrink-0">
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Research Methodology</h3>
-                    <p class="text-gray-600 mb-4 line-clamp-3">
-                        Explore robust research methodologies to design and conduct high-quality academic studies.
-                    </p>
-                    <a href="ai.html" class="text-blue-600 hover:underline">Learn More</a>
-                </div>
-            </div>
-        </div>
+<body class="bg-gray-100 smooth-scroll">
+  <!-- Navigation -->
+  <nav class="bg-charcoal text-white sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="text-3xl font-bold">EduResHub</a>
+      <div class="hidden md:flex space-x-8">
+        <a href="#home" class="hover:text-mustard transition">Home</a>
+        <a href="#courses" class="hover:text-mustard transition">Courses</a>
+        <a href="blog.html" class="hover:text-mustard transition">Blog</a>
+        <a href="aboutme.html" class="hover:text-mustard transition">About Me</a>
+        <a href="contact.html" class="hover:text-mustard transition">Contact</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
     </div>
-</section>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-charcoal text-white">
+      <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <a href="#home" class="hover:text-mustard transition">Home</a>
+        <a href="#courses" class="hover:text-mustard transition">Courses</a>
+        <a href="blog.html" class="hover:text-mustard transition">blog.html</a>
+        <a href="aboutme.html" class="hover:text-mustard transition">About Me</a>
+        <a href="contact.html" class="hover:text-mustard transition">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <!-- <img src="https://via.placeholder.com/32?text=📚" alt="EduResHub Logo" class="w-8 h-8 mr-2"> -->
-                        <h3 class="text-lg font-semibold">EduResHub</h3>
-                    </div>
-                    <p class="text-gray-400">
-                        Education and Research Hub is dedicated to empowering academics and researchers worldwide.
-                    </p>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#ai" class="text-gray-400 hover:text-white transition">AI for Education</a></li>
-                        <li><a href="#statistics" class="text-gray-400 hover:text-white transition">Statistics</a></li>
-                        <li><a href="#publications" class="text-gray-400 hover:text-white transition">Publications</a></li>
-                        <li><a href="#msoffice" class="text-gray-400 hover:text-white transition">MS Office</a></li>
-                        <li><a href="#methodology" class="text-gray-400 hover:text-white transition">Methodology</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-                    <p class="text-gray-400">Email: contact@edureshub.com</p>
-                    <p class="text-gray-400">Phone: +1 (123) 456-7890</p>
-                </div>
-            </div>
-            <div class="mt-8 text-center text-gray-400">
-                © 2025 EduResHub. All rights reserved.
-            </div>
+  <!-- Hero Section -->
+  <section id="home" class="relative h-screen flex items-center justify-center text-white">
+    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Students collaborating in a modern classroom" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 gradient-overlay"></div>
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">Discover EduResHub</h1>
+      <p class="text-xl md:text-2xl text-cream mb-8 max-w-3xl mx-auto">Empowering your journey in education and research with cutting-edge resources.</p>
+      <a href="#courses" class="inline-block bg-mustard text-charcoal py-4 px-8 rounded-full text-lg font-semibold hover:bg-yellow-400 transition transform hover:scale-105">Start Exploring</a>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-charcoal mb-12 text-center md:text-left">Featured Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Course Card 1 -->
+        <a  href="ai.html" class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Data science workshop" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-charcoal mb-3">Data Science Mastery</h3>
+            <p class="text-gray-600 mb-4">Dive into data analysis, machine learning, and visualization techniques.</p>
+            <p class="text-mustard font-semibold hover:underline">View Album</p>
+          </div>
+        </a>
+        <!-- Course Card 2 -->
+        <a href="ai.html" class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Research lab setting" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-charcoal mb-3">Advanced Research Methods</h3>
+            <p class="text-gray-600 mb-4">Explore innovative approaches to qualitative and quantitative research.</p>
+            <p class="text-mustard font-semibold hover:underline">View Album</p>
+          </div>
+        </a>
+        <!-- Course Card 3 -->
+        <a href="ai.html" class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coding bootcamp" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-charcoal mb-3">Full-Stack Development</h3>
+            <p class="text-gray-600 mb-4">Build modern web applications from frontend to backend.</p>
+            <p class="text-mustard font-semibold hover:underline">View Album</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-charcoal text-cream py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">EduResHub</h3>
+          <p class="text-gray-300">Your gateway to world-class education and groundbreaking research.</p>
         </div>
-    </footer>
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Explore</h3>
+          <ul class="space-y-3">
+            <li><a href="#home" class="hover:text-mustard transition">Home</a></li>
+            <li><a href="#courses" class="hover:text-mustard transition">Courses</a></li>
+            <li><a href="#research" class="hover:text-mustard transition">Research</a></li>
+            <li><a href="#contact" class="hover:text-mustard transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Get in Touch</h3>
+          <p class="text-gray-300">Email: info@edureshub.com</p>
+          <p class="text-gray-300">Phone: +123-456-7890</p>
+          <div class="mt-4 flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-mustard transition">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.56v14.88A4.56 4.56 0 0 1 19.44 24H4.56A4.56 4.56 0 0 1 0 19.44V4.56A4.56 4.56 0 0 1 4.56 0h14.88A4.56 4.56 0 0 1 24 4.56zM8.46 18.75h7.08v-7.08l-3.54-3.54-3.54 3.54v7.08zm10.62-10.62h-3.54V4.56h3.54v3.57z"></path></svg>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-mustard transition">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.04c-5.52 0-10 4.48-10 10 0 4.42 3.58 8.06 8.12 8.92v-6.3H7.56v-2.62h2.56V9.92c0-2.54 1.5-3.94 3.82-3.94 1.1 0 2.26.18 2.26.18v2.48h-1.28c-1.26 0-1.66.78-1.66 1.58v1.94h2.82l-.46 2.62h-2.36v6.3c4.54-.86 8.12-4.5 8.12-8.92 0-5.52-4.48-10-10-10z"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 text-center text-gray-300">
+        <p>© 2025 EduResHub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-    <!-- JavaScript for Mobile Menu Toggle -->
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
+  <!-- JavaScript for Mobile Menu and Smooth Scroll -->
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth Scroll for Nav Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
         });
-    </script>
+        // Close mobile menu after click
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
 </body>
 </html>

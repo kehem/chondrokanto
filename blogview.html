@@ -15,42 +15,33 @@
 <body class="bg-gray-50 text-gray-800">
     <!-- Navigation -->
     <nav class="bg-white shadow-sm fixed w-full z-10">
-        <div class="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-blue-600">EduResHub</a>
-                </div>
-                <div class="hidden sm:flex sm:items-center sm:space-x-8">
-                    <a href="index.html#ai" class="text-gray-600 hover:text-blue-600 transition">AI for Education</a>
-                    <a href="index.html#statistics" class="text-gray-600 hover:text-blue-600 transition">Statistics</a>
-                    <a href="index.html#publications" class="text-gray-600 hover:text-blue-600 transition">Publications</a>
-                    <a href="index.html#msoffice" class="text-gray-600 hover:text-blue-600 transition">MS Office</a>
-                    <a href="index.html#methodology" class="text-gray-600 hover:text-blue-600 transition">Methodology</a>
-                    <a href="blog.html" class="text-gray-600 hover:text-blue-600 transition">Blog</a>
-                    <a href="aboutme.html" class="text-gray-600 hover:text-blue-600 transition">About Me</a>
-                </div>
-                <div class="flex items-center sm:hidden">
-                    <button id="menu-toggle" class="text-gray-600 hover:text-blue-600 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden sm:hidden bg-white shadow-md">
-            <div class="px-4 pt-2 pb-3 space-y-1">
-                <a href="index.html#ai" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">AI for Education</a>
-                <a href="index.html#statistics" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Statistics</a>
-                <a href="index.html#publications" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Publications</a>
-                <a href="index.html#msoffice" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">MS Office</a>
-                <a href="index.html#methodology" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Methodology</a>
-                <a href="blog.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">Blog</a>
-                <a href="aboutme.html" class="block text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md">About Me</a>
-            </div>
-        </div>
-    </nav>
+        <nav class="bg-charcoal text-white sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="text-3xl font-bold">EduResHub</a>
+      <div class="hidden md:flex space-x-8">
+        <a href="#home" class="hover:text-mustard transition">Home</a>
+        <a href="#courses" class="hover:text-mustard transition">Courses</a>
+        <a href="blog.html" class="hover:text-mustard transition">Blog</a>
+        <a href="aboutme.html" class="hover:text-mustard transition">About Me</a>
+        <a href="contact.html" class="hover:text-mustard transition">Contact</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-charcoal text-white">
+      <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <a href="#home" class="hover:text-mustard transition">Home</a>
+        <a href="#courses" class="hover:text-mustard transition">Courses</a>
+        <a href="blog.html" class="hover:text-mustard transition">blog.html</a>
+        <a href="aboutme.html" class="hover:text-mustard transition">About Me</a>
+        <a href="contact.html" class="hover:text-mustard transition">Contact</a>
+      </div>
+    </div>
+  </nav>
 
     <!-- Blog Post Content Section -->
     <section class="pt-24 pb-16">
